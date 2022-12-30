@@ -1,4 +1,25 @@
-"use strict"
+// data type 
+// javaScript dinamic programming language not static programming 
+//language yani js hech qanday typega bog'lanmagan
+// bularning farqlari
+// data type in js 8 ta 
+// String, Number, Boolean, Null, Undefined, BigInt, Symbol, Object
+
+// bu mavzuga chuqurroq kiyin kiramiz
+
+// primetive
+let num = 123;
+let str = "salom";
+let bol = true;
+let n = null;
+let undef = undefined;
+let big = 123123n
+let syb = Symbol("23")
+
+// non-primetive
+let obj3 = {}
+
+"use strict" // ES6 dan foydalanish va undan yuqorisidan
 var foo = "nimadir";
 console.log(foo);
 
@@ -28,12 +49,6 @@ console.log(message);
 // let message = "send two message";
 
 
-// data type 
-// javaScript dinamic programming language not static programming 
-//language yani js hech qanday typega bog'lanmagan
-// bularning farqlari
-// data type in js 8 ta 
-// String, Number, Boolean, Null, Undefined, BigInt, Symbol, Object
 
 let message1 = "message";
 message1 = 213124;
