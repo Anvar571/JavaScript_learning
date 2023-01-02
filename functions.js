@@ -127,3 +127,16 @@ if (age1 < 18) {
 }
 
 welcome(); // ok now
+
+// callback functionlar
+// bu nima uchun ishlatiladi bu asosan bir funksiya ishlagandan kiyin ishlaydigan funksiya hisoblanadi
+// bu qayirda ishlatiladi masalan: userdan qanaqadir ma'lumot olindi va shu ma'lumotni qayta ishlash kerak 
+// bo'ladigan bo'lsa callback functiondan foydalansa bo'ladi
+function userQ(question) {
+  let question1 = "savol kiriting";
+  question(question1) 
+}
+
+function question1(value) {
+  console.log(`nimadir`, value);
+}
