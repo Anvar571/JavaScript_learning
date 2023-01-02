@@ -1,6 +1,11 @@
 // data type 
 // javaScript dinamic programming language not static programming 
-//language yani js hech qanday typega bog'lanmagan
+// js single threed ishlaydi yani bir vaqtning o'zida faqat bitta ishni bajaradi 
+// likin multithreed qilsa ham bo'ladi jsni endi 
+// js single threed non-blocking langualge deyish mumkin
+// bu haqida kiyinroq to'xtalamiz shunchaki ma'lumot
+
+// language yani js hech qanday typega bog'lanmagan
 // bularning farqlari
 // data type in js 8 ta 
 // String, Number, Boolean, Null, Undefined, BigInt, Symbol, Object
