@@ -1,7 +1,7 @@
 // foydalanuvchi prompt orqali ma'lumot kiriradi shu malumotlarni obyektga yozish
 function myAlertFunc() {
     let fruit = {};
-    for (let i=0; i<4; i++){
+    for (let i = 0; i < 4; i++) {
         let key = prompt("meva nomi", "olma");
         let value = prompt("meva narxi", 0);
         fruit[key] = value
@@ -9,10 +9,11 @@ function myAlertFunc() {
     console.log(fruit);
 }
 
-myAlertFunc();
+// myAlertFunc();
 
 // ichma ich obyetlarning ichidan ma'lumot o'qish
 // eng oxirgisini yoki oxirgisidan bitta oldingisini o'qish 
+// obj1 ichidagi  agelarning yig'indisini topish
 let obj1 = {
     name: "anvar",
     age: 22,
@@ -21,7 +22,7 @@ let obj1 = {
         age: 22,
         child: {
             car: "neva",
-            color: "red",
+            age: 12,
             child: {
                 name: "sariq",
                 age: 34
@@ -29,14 +30,10 @@ let obj1 = {
         }
     }
 }
-
-for (let key in obj1) {
-    if (key === 'child'){
-        for (let key1 in key) {
-            console.log(key1);
-        }
-    }else{
-        console.log(key);
-    }
+let sum = 0;
+while (obj1) {
+    sum += obj1.age
+    obj1 = obj1.child
 }
+console.log(sum);
 

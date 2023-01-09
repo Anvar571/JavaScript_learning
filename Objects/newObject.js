@@ -23,4 +23,18 @@ function User(name) {
 }
 
 let john = User("John"); // redirects call to new User
-console.log(john.name); // John
+// console.log(john.name); // John
+console.log(nimadir);
+nimadir = "salom"
+var nimadir;
+
+// ================================
+let value = ("name", "title", "founded")
+
+let itschool = {
+    name: "IT academy",
+    title: "discription",
+    founded: 2019
+}
+
+console.log(itschool[value]);

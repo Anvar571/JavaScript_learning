@@ -140,3 +140,5 @@ function userQ(question) {
 function question1(value) {
   console.log(`nimadir`, value);
 }
+
+// arrow functionlar return qilmasdan bitta qiymatni qaytarib yuborishi mumkin
