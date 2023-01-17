@@ -35,4 +35,13 @@ const numbers1 = [21, 21,423,42,1,312,-12,0,234];
 console.log(numbers1.some(num => num > 352432)); // false
 console.log(numbers1.some(num => num > 21)); // true
 
-// reduce method
+// reduce method 
+const nums = [12, 34,1,43,42,4]
+const res2 = nums.reduce((prev, curr) => {
+    // prev bu yerda oldingi qiymatni saqlab boradi
+    // ya'ni eski qiymat bilan nimadir qilish kerak bo'lib qolsa ishlatish mumkin
+    // oldingi qiymat bilan
+    console.log(prev);
+    return prev + curr
+});
+console.log(res2);
