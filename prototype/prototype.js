@@ -1,3 +1,9 @@
+// constructor function bizga nimaga kerak biz biror obyect qursak va ma'lum darajaga erishgandan kiyin uni
+// yani versiyasini ishlab chiqarish kerak shu vaqtda biz uni qaytadan yozmaymiz shuning uchun undan 
+// nusxa olib o'zgartirishlar kiritib ishlatib ketaveramiz 
+// ekisi esa o'z holicha qolaveradi
+
+
 // biz bilamizki js obyektlar yashirin prototypega ega shuning uchun u methodlarni shundan oladi
 // biz obyet yoki biror data type methodidan foydalanayotganimizda u birinchi shu objning o'zidan qidiradi
 // bo'lmasa prototypedan qidiradi 
@@ -127,6 +133,49 @@ let pockets = {
 
 console.log(pockets.pen);
 console.log(bed.money);
+
+// qaysi objectga yozadi
+let banana = {
+    eat() {
+        this.full = true
+    }
+}
+
+let garella = {
+    __proto__: banana
+}
+garella.eat()
+banana.eat()
+console.log(banana.full);
+console.log(garella.full);
+
+
+let hamster = {
+    stomach: [],
+
+    eat(food) {
+        this.stomach.push(food);
+        // this.stomach = [food] // bu ham bir yo'li
+    }
+};
+
+let speedy = {
+    __proto__: hamster,
+    stomach: []
+};
+
+let lazy = {
+    __proto__: hamster,
+    stomach: []
+};
+
+// This one found the food
+speedy.eat("apple");
+console.log(speedy.stomach); // apple
+
+console.log(lazy.stomach); // apple
+// bu muammo buni yechish uchun har bir nusxa olingan objectga arrayni o'zini bersh kerak
+
 
 // js ichki tuzilishi juda optemalashtirilgan u bir topgan qiymatini eslab qolib kiyingi safar shundan qidiradi
 // cashelash natijasida va boshqa yo'larda

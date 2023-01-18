@@ -1,0 +1,1 @@
+// o'zgartirib bo'ladiganlar va o'zgartirib bo'lmaydiganlar

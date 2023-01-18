@@ -75,3 +75,112 @@ user = null; // overwrite to make things obvious
 admin.sayHi();
 
 // arrow functionlarda this keyword yuq
+
+// juda yaxshi misollari bor
+// https://www.codingame.com/playgrounds/9799/learn-solve-call-apply-and-bind-methods-in-javascript
+
+function sumOfNumbers() {
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+var numbers = [1, 2, 3];
+var sum = sumOfNumbers.apply(null, numbers);
+console.log(sum);
+
+function sumOfNumbers() {
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+var sum = sumOfNumbers.call(null, 1, 2, 3);
+console.log(sum);
+
+function checkFun(a, b, c) {
+    console.log(this);
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+checkFun.apply(1, [2, 3, 4]);
+
+var func = function () {
+    console.log(this)
+}.bind(1);
+
+func();
+
+var updateZipCode = function () {
+    console.log(this);
+};
+updateZipCode.call({ zip: '11787' });
+
+var updateZipCode = function () {
+    console.log(this);
+};
+var zipCode = {
+    zip: '11787'
+};
+updateZipCode.call(zipCode);
+
+
+var updateZipCode = function (newZip, country) {
+    console.log(newZip + ' ' + country);
+};
+var zipCode = {
+    zip: '11787'
+};
+updateZipCode.call(zipCode, '11888', 'us');
+
+var updateZipCode = function (newZip, country) {
+    console.log(newZip + ' ' + country);
+};
+var zipCode = {
+    zip: '11787'
+};
+updateZipCode.apply(zipCode, ['11888', 'us']);
+
+"use strict";
+var zipcode = {
+    checkZipcode: function () {
+        console.log(this);
+        function updateZipCode() {
+            console.log(this);
+        }
+        updateZipCode.call(this);
+    }
+}
+zipcode.checkZipcode();
+
+"use strict";
+var zipcode = {
+    checkZipcode: function () {
+        console.log(this);
+        var updateZipCode = function () {
+            console.log(this);
+        }.bind(this);
+        updateZipCode();
+    }
+}
+zipcode.checkZipcode();
+
+"use strict";
+var person = {
+    name: "Jack",
+    prop: {
+        name: "Daniel",
+        getName: function () {
+            return this.name;
+        }
+    }
+}
+
+var name = person.prop.getName.bind(person);
+console.log(name());
+
+var name = person.prop.getName();
+console.log(name);
