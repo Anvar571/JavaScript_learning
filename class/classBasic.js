@@ -88,3 +88,5 @@ class UserOne {
 }
 let user2 = new UserOne("anvar", "abdurashidov")
 console.log(user2.fullname);
+
+// polimarfizm, incapsulation, inheritance, abstruction
