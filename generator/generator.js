@@ -20,4 +20,4 @@ let generator = generateSequence();
 
 let one = generator.next();
 
-alert(JSON.stringify(one)); // {value: 1, done: false}
+console.log(one); // {value: 1, done: false}
