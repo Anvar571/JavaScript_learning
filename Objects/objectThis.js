@@ -87,7 +87,9 @@ function sumOfNumbers() {
     return total;
 }
 var numbers = [1, 2, 3];
+
 var sum = sumOfNumbers.apply(null, numbers);
+
 console.log(sum);
 
 function sumOfNumbers() {
